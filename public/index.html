@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileUploader - Simple File Sharing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-upload-alt"></i> FileUploader</h1>
+            <p>Upload and share files instantly. No expiration. Free forever.</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drag & Drop your files here</h3>
+                    <p>Supports images, videos, audio, documents, and more</p>
+                    <span class="or">OR</span>
+                    <button class="browse-btn" id="browseBtn">Browse Files</button>
+                    <input type="file" id="fileInput" multiple style="display: none;">
+                </div>
+            </div>
+
+            <div class="progress-container" id="progressContainer" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Upload Successful!</h3>
+                </div>
+                <div class="file-url">
+                    <input type="text" id="fileUrl" readonly>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="file-preview" id="filePreview"></div>
+                <button class="new-upload-btn" id="newUploadBtn">
+                    <i class="fas fa-plus"></i> Upload New File
+                </button>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-infinity"></i>
+                    <h4>No Expiration</h4>
+                    <p>Files stay forever</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Fast Upload</h4>
+                    <p>Quick and reliable</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure</h4>
+                    <p>Protected uploads</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-robot"></i>
+                    <h4>API Support</h4>
+                    <p>Bot friendly</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Express.js & Vercel</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
